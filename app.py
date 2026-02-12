@@ -596,17 +596,17 @@ st.markdown("""
 # ============================================================================
 st.markdown("""
 <div class="nav-container">
-    <a href="javascript:void(0)" onclick="var container = window.parent.document.querySelector('[data-testid=\'stAppViewContainer\']'); if(container) { container.scrollTo({top: 0, behavior: 'smooth'}); } else { window.scrollTo({top: 0, behavior: 'smooth'}); }" class="nav-logo">
+    <div onclick="var selectors=['[data-testid=stMain]','section.main','[data-testid=stAppViewContainer]','.main'];for(var i=0;i<selectors.length;i++){var el=document.querySelector(selectors[i]);if(el&&el.scrollHeight>el.clientHeight){el.scrollTop=0;}}window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;" class="nav-logo" style="cursor:pointer;">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 6V22L8 18L16 22L23 18V2L16 6L8 2L1 6Z" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M8 2V18" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M16 6V22" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span>VGT NEXUS</span>
-    </a>
+    </div>
     <div class="nav-links">
         <a href="#problematicas" class="nav-link">Problemáticas</a>
-        <a href="#solucion" class="nav-link">Solución</a>
+        <a href="#video-demo" class="nav-link">Solución</a>
         <a href="#precios" class="nav-link">Precios</a>
         <a href="#contacto" class="nav-cta">Solicitar Demo</a>
     </div>
@@ -938,7 +938,7 @@ with col_vent_img:
 st.markdown("""
 <div id="video-demo" style="text-align: center; margin-top: 4rem; margin-bottom: 4rem;">
     <h2 style="font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 700; color: #1E293B; margin-bottom: 2rem;">
-        Conoce Vista Nexus en Acción
+        Conoce VGT Nexus en acción
     </h2>
 </div>
 """, unsafe_allow_html=True)
