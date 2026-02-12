@@ -112,8 +112,14 @@ st.markdown("""
         font-weight: 700;
         font-size: 1.5rem;
         color: #F8FAFC !important;
-        text-decoration: none;
+        text-decoration: none !important;
+        cursor: pointer;
         letter-spacing: -0.5px;
+    }
+    
+    .nav-logo:hover, .nav-logo:visited, .nav-logo:active, .nav-logo:focus {
+        text-decoration: none !important;
+        color: #F8FAFC !important;
     }
     
     .nav-logo svg { width: 32px; height: 32px; }
@@ -590,7 +596,7 @@ st.markdown("""
 # ============================================================================
 st.markdown("""
 <div class="nav-container">
-    <a href="#" class="nav-logo">
+    <a href="javascript:void(0)" onclick="var container = window.parent.document.querySelector('[data-testid=\'stAppViewContainer\']'); if(container) { container.scrollTo({top: 0, behavior: 'smooth'}); } else { window.scrollTo({top: 0, behavior: 'smooth'}); }" class="nav-logo">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 6V22L8 18L16 22L23 18V2L16 6L8 2L1 6Z" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M8 2V18" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
